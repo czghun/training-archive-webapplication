@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+<title>Archive</title>
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+<link rel="stylesheet" href="../static/css/generaldesign.css" th:href="@{css/info-list.css}" />
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+
+#scheme{
+ 	background-color: #e5b766;
+    text-align:center;
+    border-style:solid;
+    border-width: 0px 0px 2px 0px;	
+	border-color:black;
+ 	
+ }
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight:bold;
+    
+}
+
+li a:hover {
+    background-color: #92733c;
+}
+
+#search{
+	float:right;
+	text-align:right;	
+	padding: -3px 0px;
+	font-size:22px;
+	border-width: 0px 0px 1px 0px;	
+	border-radius: 4px;
+	padding: 90px 0px 0px 20px;
+}
+.searchForm {
+    float: right;
+}
+
+.searchForm label {
+    float: left;
+    font-family: barlow condensed;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.hint {
+    color: #999999;
+}
+
+#searchBox {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background:white;
+    border-color: #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid none solid solid;
+    border-width: 1px 1px 1px 1px;
+    height: 13px;
+    padding: 4px 5px 3px;
+    float: left;
+    width: 200px;
+    outline: medium none;
+    font-size: 11px;
+}
+html, body{
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#searchSubmit {
+    background-color: white;
+    background-position: -2px 0px;
+    border: 0 none #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    height: 22px;
+    left: -2px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999px;
+    background-image: url("sbutton.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    outline: medium none;
+    padding: 1px;
+    width: 21px;
+}
+
+#searchSubmit:hover {
+    background-position: -23px 0px;
+}
+
+#Headlook{
+	font-size:22px;
+	position: absolute;
+    top: 8px;
+    left: 16px;
+    padding: 0px;
+}
+#body{
+	margin-left:260px;	
+	width:80%;
+	font-size:16px;
+	text-align:justify;
+	padding:30px 30px 0px 0px;
+	
+}
+
+#leftsidebar {
+	background: linear-gradient(to right, #eee 85%, white );
+	text-align:left;
+	float:left;
+	padding: 40px 30px 100% 10px;
+}
+
+h2 {
+	border:solid;
+	border-width: 0px 0px 1px 0px;
+}
+#rightsidebar{
+	background: linear-gradient(to left, #eee 85% , white);
+	text-align:right;
+	float:right;
+	padding: 40px 10px 100% 260px;
+}
+ol{
+	
+	margin:0 auto;
+	float:left;
+	text-align:left;
+}
+footer{
+	text-align:center;
+	display:block;
+}
+</style>
+</head>
+<body>
+
+
+<ul id="scheme">
+<li id="Headlook">
+	  <h1><img src="../static/images/logo.png"/>
+      <th:text="#{archive.heading}">A R C H I V E</h1> 
+   	<li id="search"><h2>
+     <form action="#" th:action="@{/}" method="get">
+        <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
+        <button id="searchSubmit" class="submit" title="Search"	th:title="#{employees.action.search.button.title}" type="submit"></button>
+      </form>
+    </li>
+  <li id="search"><a href="vulnerability.html">Vulnerabilities</a></li>
+  <li id="search"><a href="attacks.html">Attacks</a></li>  
+  <li id="search"><a href="index.html">Home</a></li>
+  	
+</ul>
+
+<div id="leftsidebar">
+<h3>News</h3>
+	<a href="global.html"> 2017 Global BoD Election</a><br/>
+    <a href="honorary.html">Honorary Membership</a><br/>
+    <a href="OWASP.html">OWASP 2017 World Tour Boston</a></div>
+    
+ <div id="rightsidebar"></div>
+
+<div id="body">
+
+<p>Note: This list of attack types is incomplete, hence the large amount of data and lacking the required amount of time for completion, my apologies. Detailed information can be found on the <a href="https://www.owasp.org/index.php/Main_Page">www.owasp.org</a> website.
+</p>
+<p>There are known 12 subcategories of web application vulnerabilities at this time (2017 november), but only 3 will be shown</p>
+<h2>Attacks</h2> 
+<p>Attacks are the techniques that attackers use to exploit the vulnerabilities in applications. Attacks are often confused with vulnerabilities, so please try to be sure that the attack you are describing is something that an attacker would do, rather than a weakness in an application.</p>
+
+<p>All attack articles should follow the Attack template.</p>
+<h2>Examples of attacks</h2>
+<ul>
+    <li><p>Brute Force: Is an exhaustive attack that works by testing every possible value of a parameter (password, file name, etc.).</p></li>
+    <li><p>Cache Poisoning: Is an attack that seeks to introduce false or malicious data into a web cache, normally via HTTP Response Splitting.</p></li>
+    <li><p>DNS Poisoning: Is an attack that seeks to introduce false DNS address information into the cache of a DNS server, where it will be served to other users enabling a variety of attacks. (e.g., Phishing)</p></li>
+</ul>
+<h2>Categories</h2>
+<p>If you are interested in a certain category, click on it</p>
+	<p><a href="abuse.html"><span>Abuse of functionality‎</span></a></p>
+	<p><a href="injection.html"><span>Injection</span></a></p>
+	<a href="spoofing.html"><span>Spoofing</span></a>
+
+</div>
+<footer><p>
+All rights reserved - Archive  - 2017
+</p>
+</footer>
+</body>
+</html>

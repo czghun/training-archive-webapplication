@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+<title>Archive</title>
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+<link rel="stylesheet" href="../static/css/generaldesign.css" th:href="@{css/info-list.css}" />
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    }
+ #scheme{
+ 	background-color: #e5b766;
+    text-align:center;
+    border-style:solid;
+    border-width: 0px 0px 2px 0px;	
+	border-color:black;
+ 	
+ }
+
+
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight:bold;
+    
+}
+
+li a:hover {
+    background-color: #92733c;
+}
+
+#search{
+	float:right;
+	text-align:right;	
+	padding: -3px 0px;
+	font-size:22px;
+	border-width: 0px 0px 2px 0px;	
+	border-color: blue;
+	border-radius: 4px;
+	padding: 90px 0px 0px 20px;
+}
+.searchForm {
+    float: right;
+}
+
+.searchForm label {
+    float: left;
+    font-family: barlow condensed;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.hint {
+    color: #999999;
+}
+
+#searchBox {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background:white;
+    border-color: #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid none solid solid;
+    border-width: 1px 1px 1px 1px;
+    height: 13px;
+    padding: 4px 5px 3px;
+    float: left;
+    width: 200px;
+    outline: medium none;
+    font-size: 11px;
+}
+html, body{
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#searchSubmit {
+    background-color: white;
+    background-position: -2px 0px;
+    border: 0 none #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    height: 22px;
+    left: -2px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999px;
+    background-image: url("sbutton.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    outline: medium none;
+    padding: 1px;
+    width: 21px;
+}
+
+#searchSubmit:hover {
+    background-position: -23px 0px;
+}
+
+#Headlook{
+	font-size:22px;
+	position: absolute;
+    top: 8px;
+    left: 16px;
+    padding: 0px;
+}
+#body{
+	margin-left:260px;	
+	width:80%;
+	font-size:16px;
+	text-align:justify;
+	padding:30px 30px 0px 0px;
+	
+}
+
+ 
+
+#leftsidebar {
+	background: linear-gradient(to right, #eee 85%, white );
+	text-align:left;
+	float:left;
+	padding: 40px 30px 400px 10px;
+	
+}
+
+#rightsidebar{
+	background: linear-gradient(to left, #eee 85% , white);
+	text-align:right;
+	float:right;
+	padding: 40px 10px 600px 260px;
+}
+
+h2 {
+	border:solid;
+	border-width: 0px 0px 1px 0px;
+}
+ol{
+	
+	margin:0 auto;
+	float:left;
+	text-align:left;
+}
+footer{
+	text-align:center;
+	display:block;
+}
+
+</style>
+</head>
+<body>
+
+
+<ul id="scheme">
+<li id="Headlook">
+	  <h1><img src="../static/images/logo.png"/>
+      <th:text="#{archive.heading}">A R C H I V E</h1> 
+   	<li id="search">
+     <form action="#" th:action="@{/}" method="get">
+        <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
+        <button id="searchSubmit" class="submit" title="Search"	th:title="#{employees.action.search.button.title}" type="submit"></button>
+      </form>
+    </li>
+  <li id="search"><a href="vulnerability.html">Vulnerabilities</a></li>
+  <li id="search"><a href="attacks.html">Attacks</a></li>  
+  <li id="search"><a href="index.html">Home</a></li>
+</ul>
+
+<div id="leftsidebar">
+<h3>News</h3>
+	<a href="global.html"> 2017 Global BoD Election</a><br/>
+    <a href="honorary.html">Honorary Membership</a><br/>
+    <a href="OWASP.html">OWASP 2017 World Tour Boston</a></div>
+    
+ <div id="rightsidebar"></div>
+
+<div id="body">
+<h2>2017 Global Board of Directors Election</h2>
+<p>The OWASP Foundation was established in 2001 as an open community and software security resource. Since then, OWASP has grown to be globally recognized as a credible source for application security standards (see industry citations). Individuals typically find OWASP when searching the internet for information about software security - and they are happy to find a reliable source of knowledge built by an extremely open and passionate community. OWASP is open to anyone. Anyone can attend OWASP's vendor agnostic local chapter meetings, participate in regional and global conferences, and contribute to the many OWASP projects. And anyone can start a new project, form a new chapter, or lend their expertise to help an OWASP Global Committee.
+
+The OWASP Foundation Board of Directors currently consists of seven elected volunteers. These unpaid volunteers dedicate themselves to the organizational mission and playing a pivotal role in the software security community. OWASP conducts democratic elections of its Board Members to enable bottom-up advancement of its mission. </p>
+<h2>Global Board of Directors Primary Responsibilities</h2>
+<p>The OWASP Foundation Board of Directors currently consists of seven elected volunteers who serve a two year term. These unpaid volunteers dedicate themselves to the organizational mission and playing a pivotal role in the software security community. Members of the Global Board of Directors are responsible for setting the strategic direction of the organization and ensuring the financial integrity of the Foundation.</p>
+
+<p>Detailed information on meeting requirements, roles and responsibilities within the board, term limits, and elections is found in the OWASP Foundation bylaws. The Board of Directors Code of Conduct and details of the orientation and on-boarding process are found on our Governance page.</p>
+
+<p>Please reach out to our current Board Members if you'd like additional information on what it's like to be a Global Board member at the OWASP Foundation.</p>
+
+<p>Additional Responsibilities that the International Board of Directors must adhere to can be found on the Foundation Governance Page </p>
+
+
+
+
+
+
+</div>
+<footer><p>
+All rights reserved - Archive  - 2017
+</p>
+</footer>
+</body>
+</html>	

