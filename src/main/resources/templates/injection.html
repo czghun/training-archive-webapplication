@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"/>
 <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
 <title>Archive</title>
-<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"/> 
 <link rel="stylesheet" href="../static/css/generaldesign.css" th:href="@{css/info-list.css}" />
 <style>
 ul {
@@ -171,16 +171,16 @@ footer{
 <ul id="scheme">
 <li id="Headlook">
 	  <h1><img src="../static/images/logo.png"/>
-      <th:text="#{archive.heading}">A R C H I V E</h1> 
+      A R C H I V E</h1></li> 
    	<li id="search"><h2>
      <form action="#" th:action="@{/}" method="get">
         <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
         <button id="searchSubmit" class="submit" title="Search"	th:title="#{employees.action.search.button.title}" type="submit"></button>
       </form>
     </li>
-  <li id="search"><a href="vulnerability.html">Vulnerabilities</a></li>
-  <li id="search"><a href="attacks.html">Attacks</a></li>  
-  <li id="search"><a href="index.html">Home</a></li>
+  <li id="search"><a href="/vulnerability">Vulnerabilities</a></li>
+  <li id="search"><a href="/attacks">Attacks</a></li>  
+  <li id="search"><a href="/index">Home</a></li>
   	
 </ul>
 

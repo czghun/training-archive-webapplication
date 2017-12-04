@@ -169,17 +169,17 @@ footer{
 <ul id="scheme">
 	<li id="Headlook">
 		  <h1><img src="../static/images/logo.png"/>
-	       A R C H I V E</h1>
-	</li>
+	       A R C H I V E</h1></li>
+	
    	<li id="search">
      <form action="#" th:action="@{/}" method="get">
         <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
         <button id="searchSubmit" class="submit" title="Search"	th:title="#{employees.action.search.button.title}" type="submit"></button>
       </form>
     </li>
-  <li id="search"><a href="vulnerability.html">Vulnerabilities</a></li>
-  <li id="search"><a href="attacks.html">Attacks</a></li>  
-  <li id="search"><a href="index.html">Home</a></li>
+  <li id="search"><a href="/vulnerability">Vulnerabilities</a></li>
+  <li id="search"><a href="/attacks">Attacks</a></li>  
+  <li id="search"><a href="/index">Home</a></li>
   
 </ul>
 
