@@ -25,5 +25,41 @@ public class ArchiveController {
 	public String attacks() {
 		return "attacks";
 	}
+	@RequestMapping("/global")
+	public String global() {
+		return "global";
+	}
+	@RequestMapping("/honorary")
+	public String honorary() {
+		return "honorary";
+	}
+	@RequestMapping("/OWASP")
+	public String OWASP() {
+		return "OWASP";
+	}
+	@RequestMapping("/abuse")
+	public String abuse() {
+		return "abuse";
+	}
+	@RequestMapping("/injection")
+	public String injection() {
+		return "injection";
+	}
+	@RequestMapping("/spoofing")
+	public String spoofing() {
+		return "spoofing";
+	}
+	@RequestMapping("/crypthographic")
+	public String crypthographic() {
+		return "crypthographic";
+	}
+	@RequestMapping("/enviromental")
+	public String enviromental() {
+		return "enviromental";
+	}
+	@RequestMapping("/input")
+	public String input() {
+		return "input";
+	}
 	
 }

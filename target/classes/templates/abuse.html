@@ -139,7 +139,7 @@ html, body{
 	background: linear-gradient(to right, #eee 85%, white );
 	text-align:left;
 	float:left;
-	padding: 40px 30px 100% 10px;
+	padding: 40px 30px 100% 10px; width:250px;
 }
 
 h2 {
@@ -150,7 +150,7 @@ h2 {
 	background: linear-gradient(to left, #eee 85% , white);
 	text-align:right;
 	float:right;
-	padding: 40px 10px 100% 260px;
+	padding: 40px 30px 100% 10px; width:250px;
 }
 ol{
 	
@@ -171,9 +171,9 @@ footer{
 <li id="Headlook">
 	  <h1><img src="../static/images/logo.png"/>
       A R C H I V E</h1></li> 
-   	<li id="search"><h2>
+   	<li id="search">
      <form action="#" th:action="@{/}" method="get">
-        <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{employees.action.search.textbox.placeholder}" autocomplete="off" />
+        <input id="searchBox" class="hint" type="text" name="searchTerm" placeholder="Search"	th:placeholder="#{ }" autocomplete="off" />
         <button id="searchSubmit" class="submit" title="Search"	th:title="#{archive.action.search.button.title}" type="submit"></button>
       </form>
     </li>
@@ -185,11 +185,12 @@ footer{
 
 <div id="leftsidebar">
 <h3>News</h3>
-	<a href="global.html"> 2017 Global BoD Election</a><br/>
-    <a href="honorary.html">Honorary Membership</a><br/>
-    <a href="OWASP.html">OWASP 2017 World Tour Boston</a></div>
+	<a href="/global"> 2017 Global BoD Election</a><br/>
+    <a href="/honorary">Honorary Membership</a><br/>
+    <a href="/OWASP">OWASP 2017 World Tour Boston</a></div>
     
- <div id="rightsidebar"></div>
+<div id="rightsidebar"><a href="/tip">Get Your Daily Tip Here!</a><br/><br/>
+ <div class="tip" th:text="${tip}">Daily Tip</div></div>
 
 <div id="body">
 
